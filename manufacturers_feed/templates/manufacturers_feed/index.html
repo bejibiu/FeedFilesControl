@@ -25,8 +25,8 @@
                 <form action="/"  method="post">
                     <div class="modal-body">
                         {% csrf_token %}
-                        <input class="form-control" type="text" id="id_name_brand">
-                        <input class="form-control" type="file" id="id_file_feed">
+                        <input class="form-control" type="text" id="id_brand_name" name="brand_name">
+                        <input class="form-control" type="file" id="id_file_feed" name="file_feed">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Добавить</button>
@@ -41,13 +41,18 @@
         <thead>
         <tr>
             <th>brand name</th>
+            <th>link to file</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td>
-
+                {{ brand_name }}
             </td>
+            <td>
+                {{ link_to_file }}
+            </td>
+
         </tr>
         </tbody>
     </table>
