@@ -23,6 +23,7 @@ def test_start_page_with_files(browser: WebDriver, home_page):
     name_brand_field = browser.find_element_by_id('id_brand_name')
     file_field = browser.find_element_by_id("id_file_feed")
     name_brand_field.send_keys('Bosh')
+    # TODO: change to pytest tmpfile
     file_field.send_keys(os.path.join(os.path.dirname(__file__), "example.txt"))
     form.submit()
     sleep(3)
